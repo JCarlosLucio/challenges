@@ -1,5 +1,7 @@
 /** https://www.codewars.com/kata/523f5d21c841566fde000009/typescript
  *
+ * Array.diff
+ *
  * @param {number[]} a
  * @param {number[]} b
  * @returns {number[]}
