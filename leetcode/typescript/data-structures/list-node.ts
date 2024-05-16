@@ -7,7 +7,10 @@ export class ListNode {
   }
 }
 
-export function createList(arr: number[]): ListNode {
+export function createList(arr: number[]): ListNode | null {
+  if (arr.length < 1) {
+    return null;
+  }
   const root = new ListNode(arr.shift());
 
   let node = root;
