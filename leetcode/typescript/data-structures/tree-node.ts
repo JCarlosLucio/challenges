@@ -20,11 +20,11 @@ export function createTree(arr: (number | null)[]): TreeNode {
     const leftVal = arr.shift();
     const rightVal = arr.shift();
 
-    if (leftVal) {
+    if (leftVal || leftVal === 0) {
       current.left = new TreeNode(leftVal);
       queue.push(current.left);
     }
-    if (rightVal) {
+    if (rightVal || rightVal === 0) {
       current.right = new TreeNode(rightVal);
       queue.push(current.right);
     }
