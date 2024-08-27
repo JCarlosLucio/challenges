@@ -9,7 +9,11 @@ export class TreeNode {
   }
 }
 
-export function createTree(arr: (number | null)[]): TreeNode {
+export function createTree(arr: (number | null)[]): TreeNode | null {
+  if (!arr.length) {
+    return null;
+  }
+
   const root = new TreeNode(arr.shift() ?? 0);
 
   const queue = [root];
