@@ -1,0 +1,40 @@
+
+CompileFlags:
+  Add:
+    - -fdiagnostics-color=always
+    - -pedantic-errors
+    - -g
+    - -Wall
+    - -Weffc++
+    - -Wextra
+    - -Wshadow
+    - -Wconversion
+    - -Wsign-conversion
+    - -Werror
+    - -std=c++23
+    - -I./source/includes
+
+  CompilationDatabase: auto
+
+  # Override:
+  #   - CompileFlags:
+  #       - -std=c++23
+  #     PathMatch: .*\.cpp
+
+# Index:
+#   Background: true
+#
+# Completion:
+  # AllScopes: true
+  # Duplicates: false
+
+Diagnostics:
+  UnusedIncludes: Strict
+
+  ClangTidy:
+    Add: [bugprone-*, modernize-*, cppcoreguidelines-*]
+    Remove: [modernize-use-trailing-return-type, cppcoreguidelines-avoid-magic-numbers]
+#
+# InlayHints:
+#   Enabled: true
+#   ParameterNames: true
